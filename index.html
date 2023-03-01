@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  <!-- JavaScript -->
+  <script type="text/javascript" src="/scripts/main.js" defer></script>
+  <title>Crud JavaScript</title>
+</head>
+
+<body page="lista">
+  <div class="central-users">
+    <p class="users">Cadastro de Colaboradores</p>
+  </div>
+
+  <div id="listaRegistros">
+    <div class="search">
+      <input class="inputSearch" placeholder="PESQUISAR" autofocus id="inputPesquisa" />
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="tags">ID</th>
+          <th class="tags">Nome</th>
+          <th class="tags">Telefone</th>
+          <th class="tags">Senha</th>
+          <th class="tags">Salário</th>
+          <th class="tags">Botões</th>
+        </tr>
+      </thead>
+      <tbody id="listaRegistrosBody"></tbody>
+    </table>
+
+    <div>
+      <button onclick="vizualizar('cadastro', true)">
+        <i class="fa-solid fa-plus"></i> Adicionar usuário
+      </button>
+    </div>
+  </div>
+
+  <form id="cadastroRegistro">
+    <div class="label">
+      <div>ID</div>
+      <div>
+        <input type="number" readonly id="id" />
+      </div>
+    </div>
+
+    <div class="label">
+      <div>Nome</div>
+      <div>
+        <input id="nome" />
+      </div>
+    </div>
+
+    <div class="label">
+      <div>Telefone</div>
+      <div>
+        <input type="tel" id="fone" />
+      </div>
+    </div>
+
+    <div class="label">
+      <div>Senha</div>
+      <div>
+        <input type="text" id="senha" />
+      </div>
+    </div>
+
+    <div class="label">
+      <div>Salário</div>
+      <div>
+        <input type="number" id="salario" />
+      </div>
+    </div>
+
+    <div>
+      <button>Salvar</button>
+      <button onclick="vizualizar('lista')" class="cinza" type="button">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</body>
+
+</html>

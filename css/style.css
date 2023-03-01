@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#listaRegistros {
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 0.3125rem;
+}
+
+#cadastroRegistro {
+    display: none;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+body[page='lista'] #listaRegistros {
+    display: block;
+}
+
+body[page='cadastro'] #cadastroRegistro {
+    display: flex;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url(/imagens/fundobranco.jpg);
+    background-size: cover;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    padding: 0.625rem 0.9375rem;
+    border: solid 1px #ccc;
+    border-radius: 0.3125rem;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: #07a;
+    color: #fff;
+    margin: 0.1875rem;
+    padding: 0.625rem 0.9375rem;
+}
+
+button.cinza {
+    background-color: #ccc;
+    color: #666;
+}
+
+button.vermelho {
+    background-color: #a00;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    border: solid 1px #ccc;
+    border-radius: 0.25rem;
+    padding: 0.625rem;
+}
+
+.label>div {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.label>div>input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    flex: 1;
+    border-radius: 0.3125rem;
+}
+
+.search {
+    display: flex;
+    background-color: transparent;
+}
+
+.central-users {
+    border-radius: 0.3125rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #07a;
+}
+
+.tags {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+}
+
+.inputSearch {
+    flex: 1;
+    background-color: transparent;
+}
