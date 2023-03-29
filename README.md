@@ -24,7 +24,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML e CSS.
 - JavaScript.
-- Vuejs.
 
 ## 📚 Conceitos aprendidos no projeto
 
@@ -39,7 +38,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Melhorias implementadas:
 
-- Adição de novas carnes e molhos.
+- Melhorias na lógica.
 - Implementação de um verificação nos inputs.
 - Melhorias na responsividade.
 
