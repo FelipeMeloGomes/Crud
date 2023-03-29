@@ -15,7 +15,7 @@ Um crud simples feito em JavaScript. <br/>
 
 
 
-``` 
+
 
 
 ## 🚀 Tecnologias
@@ -28,14 +28,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 📚 Conceitos aprendidos no projeto
 
-- Front-end
-- Gerenciador de Pacotes (NPM).
-- JSON.
+- LocalStorage
+- Variáveis e Funções.
 - Responsividade.
-- Criação de componentes e reutilização.
-- Framework Vuejs.
 
->
 
 
 
