@@ -1,4 +1,4 @@
-<h1 align="center"> Crud Simples </h1>
+<h1 align="center"> Crud  </h1>
 
 <p align="center">
 Um crud simples feito em JavaScript. <br/>
