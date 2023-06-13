@@ -1,4 +1,4 @@
-const KEY_BD = '@colaboradores';
+const KEY_BD = "@colaboradores";
 
 // lista registros
 let listaRegistros = {
@@ -7,7 +7,7 @@ let listaRegistros = {
 };
 
 // filtro variavel
-let Filtro = '';
+let Filtro = "";
 
 // Ordena os itens
 function sortByID(a, b) {
@@ -43,7 +43,7 @@ function ordenarPorId(data) {
 
 // desenha
 function desenhar() {
-  const tbody = document.getElementById('listaRegistrosBody');
+  const tbody = document.getElementById("listaRegistrosBody");
   if (tbody) {
     let data = listaRegistros.usuarios;
     if (Filtro.trim()) {
@@ -51,17 +51,17 @@ function desenhar() {
     }
     data = ordenarPorId(data);
     const rows = gerarLinhasTabela(data);
-    tbody.innerHTML = rows.join('');
+    tbody.innerHTML = rows.join("");
   }
 }
 
 // filtrar por nome
 function filtrarPorNomeOuFone(data, filtro) {
-  if (!Array.isArray(data) || typeof filtro !== 'string') {
-    throw new Error('Os parâmetros devem ser um array e uma string');
+  if (!Array.isArray(data) || typeof filtro !== "string") {
+    throw new Error("Os parâmetros devem ser um array e uma string");
   }
 
-  const expReg = new RegExp(filtro.replace(/[^a-z0-9]/gi, ''), 'i');
+  const expReg = new RegExp(filtro.replace(/[^a-z0-9]/gi, ""), "i");
   return data.filter((usuario) =>
     expReg.test(`${usuario.nome}${usuario.fone}`)
   );
@@ -93,7 +93,7 @@ function gerarLinhasTabela(data) {
 // inserir usuarios
 function insertUsuario(nome, fone, senha, salario) {
   if (!nome || !fone || !senha || !salario) {
-    alert('Por favor, preencha todos os campos.');
+    alert("Por favor, preencha todos os campos.");
     return;
   }
 
@@ -114,7 +114,7 @@ function insertUsuario(nome, fone, senha, salario) {
 const atualizarRegistros = () => {
   gravarBD();
   desenhar();
-  vizualizar('lista');
+  vizualizar("lista");
 };
 
 // editar usuarios
@@ -126,7 +126,7 @@ function editUsuario(id, nome, fone, senha, salario) {
   usuario.salario = salario;
   gravarBD();
   desenhar();
-  vizualizar('lista');
+  vizualizar("lista");
 }
 
 // deletar usuarios
@@ -147,25 +147,25 @@ function perguntarSeDeleta(id) {
 
 // limparEditor
 function limparEdicao() {
-  const form = document.getElementById('cadastroRegistro');
-  const inputs = form.getElementsByTagName('input');
+  const form = document.getElementById("cadastroRegistro");
+  const inputs = form.getElementsByTagName("input");
 
   for (let i = 0; i < inputs.length; i++) {
-    inputs[i].value = '';
+    inputs[i].value = "";
   }
 }
 
 // visualizar pagina
 function vizualizar(pagina, novo = false, id = null) {
   const body = document.body;
-  body.setAttribute('page', pagina);
-  const cadastroForm = document.getElementById('cadastroRegistro');
-  const idInput = document.getElementById('id');
-  const nomeInput = document.getElementById('nome');
-  const foneInput = document.getElementById('fone');
-  const senhaInput = document.getElementById('senha');
-  const salarioInput = document.getElementById('salario');
-  if (pagina === 'cadastro') {
+  body.setAttribute("page", pagina);
+  const cadastroForm = document.getElementById("cadastroRegistro");
+  const idInput = document.getElementById("id");
+  const nomeInput = document.getElementById("nome");
+  const foneInput = document.getElementById("fone");
+  const senhaInput = document.getElementById("senha");
+  const salarioInput = document.getElementById("salario");
+  if (pagina === "cadastro") {
     if (novo) {
       limparEdicao();
     }
@@ -189,11 +189,11 @@ function vizualizar(pagina, novo = false, id = null) {
 function submeter(e) {
   e.preventDefault();
 
-  const idInput = document.getElementById('id');
-  const nomeInput = document.getElementById('nome');
-  const foneInput = document.getElementById('fone');
-  const senhaInput = document.getElementById('senha');
-  const salarioInput = document.getElementById('salario');
+  const idInput = document.getElementById("id");
+  const nomeInput = document.getElementById("nome");
+  const foneInput = document.getElementById("fone");
+  const senhaInput = document.getElementById("senha");
+  const salarioInput = document.getElementById("salario");
 
   const id = idInput.value.trim();
   const nome = nomeInput.value.trim();
@@ -202,7 +202,7 @@ function submeter(e) {
   const salario = salarioInput.value.trim();
 
   if (!nome || !fone || !senha || !salario) {
-    alert('Por favor, preencha todos os campos!');
+    alert("Por favor, preencha todos os campos!");
     return;
   }
 
@@ -215,12 +215,12 @@ function submeter(e) {
   limparEdicao();
 }
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   lerBD();
   document
-    .getElementById('cadastroRegistro')
-    .addEventListener('submit', submeter);
-  document.getElementById('inputPesquisa').addEventListener('keyup', (e) => {
+    .getElementById("cadastroRegistro")
+    .addEventListener("submit", submeter);
+  document.getElementById("inputPesquisa").addEventListener("keyup", (e) => {
     pesquisar(e.target.value);
   });
 });
